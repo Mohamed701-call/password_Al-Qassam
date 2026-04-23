@@ -14,7 +14,11 @@ stop_flag = False
 def handler(sig, frame):
     global stop_flag
     print(Fore.RED + "\n[!] Stopping safely...")
+
     stop_flag = True
+
+    # 🔥 FIX: force exit immediately (Ctrl+C fix)
+    os._exit(0)
 
 signal.signal(signal.SIGINT, handler)
 
@@ -68,11 +72,9 @@ def get_word_variants(word):
     variants.add(word.upper())
     variants.add(word.capitalize())
 
-    # alternating
     alt = "".join(c.upper() if i % 2 == 0 else c.lower() for i, c in enumerate(word))
     variants.add(alt)
 
-    # leet
     table = str.maketrans({
         "a": "4", "o": "0", "i": "1",
         "e": "3", "s": "5", "h": "7", "t": "7"
@@ -110,7 +112,6 @@ def generator_engine(groups, queue, limit):
     flat = [w for g in groups for w in g if w.strip()]
     prepared = [get_word_variants(w) for w in flat]
 
-    # single words
     for pool in prepared:
         for w in pool:
             if stop_flag:
@@ -121,7 +122,6 @@ def generator_engine(groups, queue, limit):
             except Full:
                 continue
 
-    # combinations
     for r in range(2, len(prepared) + 1):
         for combo in itertools.permutations(prepared, r):
             for product in itertools.product(*combo):
