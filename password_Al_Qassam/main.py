@@ -182,7 +182,7 @@ def writer_engine(queue, file_path):
 def banner():
     print(Fore.MAGENTA + "═" * 60)
     print(Fore.CYAN + "      Password Al-Qassam (Ultimate Engine)")
-    print(Fore.WHITE + "               صلي علي النبي")
+    print(Fore.WHITE + "                يا عم صلي علي النبي ")
     print(Fore.MAGENTA + "═" * 60)
 
 # ================= MAIN =================
