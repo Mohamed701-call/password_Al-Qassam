@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "password-al-qassam"
+version = "1.0.0"
+description = "Educational password generator tool"
+authors = [{name="Mohamed Khaled"}]
+dependencies = ["colorama"]
+
+[project.scripts]
+alqassam = "password_Al_Qassam.main:run"

@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Reports / runtime files
+report.txt
+
+# OS files
+.DS_Store
+Thumbs.db
