@@ -56,9 +56,9 @@ alqassam
 ### Mode 1 (Advanced)
 
 ```
-High Priority Words: Mohamed, Khaled
-Medium Priority: 2001, 1907, asc
-Low Priority: 74, nora
+High Priority Words: Mohamed, Khaled, alqassam
+Medium Priority: 2001, 2020, 72
+Low Priority: Free, Dark
 ```
 
 ### What happens:
@@ -73,7 +73,7 @@ Low Priority: 74, nora
 * Mixes priorities:
 
   * Mohamed2001
-  * Khaled1907asc74
+  * Khaled2020Free
 * Changes order and casing
 
 ---
@@ -86,8 +86,9 @@ MOHAMED
 mo7amed
 MohamedKhaled
 KhaledMohamed
-MO7AMED1907ASC74
-mOhAmEd98573398asc74
+MO7AMED2020Free
+mOhAmEd2020Free
+
 ```
 
 ---
@@ -102,14 +103,6 @@ mOhAmEd98573398asc74
    * Leetspeak (a → 4, o → 0)
 4. Rank النتائج
 5. Save في ملف
-
----
-
-## ⛔ Notes
-
-* الأداة للأغراض التعليمية فقط
-* الاستخدام بدون إذن غير قانوني
-* عدد الكلمات ممكن يكون ضخم جدًا
 
 ---
 
